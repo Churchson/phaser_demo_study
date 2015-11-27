@@ -2,6 +2,8 @@
 
 本项目是学习[phaser的官方示例](https://github.com/photonstorm/phaser-examples)时，为方便查看和记录学习心得而建立的。
 
+欢迎参考[我的学习体会](http://427studio.net/blog/1/251)
+
 主要原因是以下几点：
 
 * 在官网上的示例页面被墙
