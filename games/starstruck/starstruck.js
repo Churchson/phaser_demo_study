@@ -4,7 +4,7 @@ var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload:
 function preload() {
 
     //json定义的地图
-    game.load.tilemap('level1', 'assets/level1.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.tilemap('level11', 'assets/level11.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles-1', 'assets/tiles-1.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
     //game.load.spritesheet('droid', 'assets/droid.png', 32, 32);
@@ -33,10 +33,10 @@ function create() {
     bg = game.add.tileSprite(0, 0, 800, 600, 'background');//背景
     bg.fixedToCamera = true;//背景锁定镜头
     //使用json定义的地图
-    map = game.add.tilemap('level1');
+    map = game.add.tilemap('level11');
     //指定地图元件图
     map.addTilesetImage('tiles-1');
-    //设置元件碰撞性
+    //设置元件碰撞性，指定的是可以通行的单元（用ps打开tiles-1，添加16*16的网格，数数看）
     map.setCollisionByExclusion([ 13, 14, 15, 16, 46, 47, 48, 49, 50, 51 ]);
 
     layer = map.createLayer('Tile Layer 1');
